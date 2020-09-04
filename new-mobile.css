@@ -196,6 +196,7 @@ body {
     color: #ff6b6c;
     font-weight: 600;
     line-height: 3vw;
+    margin-bottom: 3vw;
 }
 
 .heading2 {
@@ -471,7 +472,7 @@ a {
 }
 
 .section-content h2 {
-    margin: 0px;
+    margin: 0 0 2vw 0;
 }
 
 .heading {
@@ -492,7 +493,11 @@ a {
 
 .internet {
     display: grid;
-    grid-template-columns: 6fr 1fr;
+    grid-template-columns: 3fr 1fr;
+}
+
+.mb2 {
+    margin-bottom: 4vw;
 }
 
 .info-container {
@@ -507,15 +512,18 @@ a {
 
 .info-head {
     width: 100%;
-    font-size: 3.5vw;
-    line-height: 7vw;
+    font-size: 2.3vw;
+    line-height: 8vw;
     padding-left: 1vw;
     font-weight: 600;
-    border-bottom: 1px solid #d4d4d4;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+}
+
+.info-line {
+    width: 85vw;
 }
 
 .info-object {
@@ -537,12 +545,24 @@ a {
 
 .faq-head {
     width: 100%;
-    font-size: 3vw;
+    font-size: 2.3vw;
     padding: 1.7vw 0vw 1.7vw 1vw;
     font-weight: 600;
-    border-bottom: 1px solid #d4d4d4;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+}
+
+hr {
+    width: 95%;
+    margin: 0;
+    height: 1px;
+    border-width: 0;
+    color: silver;
+    background-color: silver;
+}
+
+p {
+    margin: 0;
 }
