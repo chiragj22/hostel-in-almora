@@ -38,13 +38,14 @@ body {
     grid-template-columns: 50vw 39vw;
     grid-template-areas: 
     'slideshow booknow'
+    'inc booknow'
     'details booknow';
     flex-direction: column;
 }
 
 .gallery-container {
     grid-area: slideshow;
-    height: 40vw;
+    height: 37vw;
     margin-top: 2.5vw;
     display: flex;
     flex-direction: column;
@@ -108,28 +109,35 @@ body {
 }
 
 .inclusions-container {
-    display: none;
+    grid-area: inc;
+    display: flex;
     flex-direction: row;
+    align-items: flex-start;
+    width: 50vw;
     overflow: scroll;
+    margin-bottom: 2vw;
 }
 
 .inclusions-container::-webkit-scrollbar {
     display: none;
-}
+  }
 
 .inclusions-object {
+    width: 10vw;
     flex: none;
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 2vw;
-    padding: 3vw 7vw 1vw 0vw;
-    text-align: center;
 }
 
-.inclusions-object img{
-    height: 4vw;
-    margin-bottom: .5vw;
+.inclusion {
+    text-align: center;
+    font-size: 1vw;
+}
+
+.inc-img {
+    width: 1.7vw;
+    padding-bottom: .5vw;
 }
 
 .book-now-container {
@@ -150,11 +158,12 @@ body {
     margin: 2.5vw 0vw 0vw 7vw;
     top: 0px;
     max-height: 100%;
-    width: 30vw;
-    border-radius: 5px;
+    width: 29vw;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-shadow: 0px 3px 8px #00000029;
 }
 
 .property-flex-container {
@@ -163,7 +172,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    border-radius: 5px;
+    border-radius: 10px;
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 3px;
 }
@@ -227,12 +236,12 @@ hr {
     font-weight: bold;
     color: #414141;
     line-height: 2vw;
-    margin-bottom: .5vw;
+    margin: .5vw;
 }
 
 .rooms-container {
     max-height: 50vh;
-    width: 28vw;
+    width: 26.5vw;
     background-color: #F5F5F5;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 3px;
     border-radius: 5px;
@@ -244,7 +253,7 @@ hr {
 }
 
 .rooms-card {
-    width: 27vw;
+    width: 25vw;
     margin-top: 1vw;
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 3px;
@@ -267,9 +276,9 @@ hr {
 }
 
 .rooms-details {
-    width: 17vw;
+    width: 15vw;
     min-height: 4.7vw;
-    margin: .5vw;
+    margin: .5vw .5vw 1.5vw .5vw;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -300,7 +309,7 @@ hr {
 }
 
 .room-sharing {
-    height: 2vw;
+    height: 2.5vw;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -313,10 +322,11 @@ hr {
 }
 
 .room-price {
+    grid-area: rp;
     font-size: 1.5vw;
     font-weight: 700;
     line-height: 1.5vw;
-    align-self: flex-end;
+    align-self: flex-start;
     margin-right: .3vw;
 }
 
@@ -324,40 +334,50 @@ hr {
     width: 100%;
     display: flex;
     flex-direction: column;
+    align-self: flex-start;
 }
 
 .price-object {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        'str str'
+        'rp dp';
 }
 
 .striked-price {
     text-decoration: line-through;
-    align-self: flex-end;
+    grid-area: str;
     margin-right: .5vw;
     font-size: 1vw;
     line-height: 1vw;
     font-weight: 600;
     color: #949494;
+    margin-bottom: .2vw;
 }
 
 .discount-percentage {
+    grid-area: dp;
     padding: .2vw;
     line-height: .5vw;
-    height: .5vw;
+    height: .7vw;
+    width: 3vw;
     background-color: #00c4ab;
     color: white;
-    font-size: .7vw;
+    font-size: .8vw;
     font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
 }
 
 .room-qty-container {
     width: 100%;
+    height: 3.5vw;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: flex-end;
 }
 
 .pupn {
@@ -370,7 +390,8 @@ hr {
 }
 
 .room-qty {
-    width: 30%;
+    width: 35%;
+    align-self: flex-end;
 }
 
 .select-btn {
@@ -538,10 +559,109 @@ a {
 .internet {
     display: grid;
     grid-template-columns: 1fr 2fr;
+    font-weight: 400;
+}
+
+.house-rules {
+    font-weight: 400;
 }
 
 p {
-    margin: 0;
+    margin: 0 0 .5vw 0;
+}
+
+#map {
+    width: 50vw;
+    height: 25vw;
+    margin-bottom: 1.5vw;
+    border-radius: 10px;
+}
+
+.carousel-container {
+    height: 17vw;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    overflow: scroll;
+}
+
+.carousel-object {
+    display: flex;
+    flex-direction: column;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    margin-right: .5vw;
+    box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 3px;
+}
+
+.carousel-object-img {
+    width: 16.5vw;
+    height: 11vw;
+    overflow: hidden;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.opacity {
+    width: 16.5vw;
+    height: 11vw;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.opacity .carousel-price {
+    color: white;
+    font-size: 1.7vw;
+    font-weight: 600;
+    padding: .2vw;
+}
+
+.opacity .night {
+    color: white;
+    font-size: 1.4vw;
+    font-weight: 100;
+}
+
+.carousel-tag {
+    text-transform: capitalize;
+    color: white;
+    font-size: 1vw;
+    font-weight: 600;
+    padding: .4vw .8vw;
+}
+
+.carousel-object-details {
+    height: 4.5vw;
+    padding-left: .6vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: white;
+}
+
+.carousel-name {
+    font-size: 1.2vw;
+    font-weight: 600;
+    color: #474950;
+    margin: .1vw 0vw;
+}
+
+.carousel-location {
+    font-size: .9vw;
+    font-weight: 400;
+    color: #474950;
+    margin: .3vw 0vw;
 }
 
 .info-container {
@@ -599,4 +719,28 @@ p {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+}
+
+.homestay {
+    background-color: orangered;
+}
+
+.hostel {
+    background-color: #03ff8b;
+}
+
+.hotel {
+    background-color: #ea0042;
+}
+
+.resort {
+    background-color: #9449ea;
+}
+
+.villa {
+    background-color: #0089ea;
+}
+
+.apartment {
+    background-color: #0089ea;
 }

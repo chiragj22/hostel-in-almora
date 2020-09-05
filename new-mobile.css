@@ -8,7 +8,7 @@ body {
     font-size: 2.5vw;
     top: 0px;
     left: 0px;
-    background: #FDFDFD 0% 0% no-repeat padding-box;
+    background: rgb(245, 245, 245);
     opacity: 1;
 }
 
@@ -98,7 +98,7 @@ body {
     cursor: pointer;
     background-position: center center;
     background-repeat: no-repeat;
-    box-shadow: 10px 10px 6px #00000029;
+    box-shadow: 0px 10px 6px #00000029;
     border-radius: 2px;
     margin-right: 1.5vw;
 }
@@ -250,6 +250,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    border-radius: 5px;
 }
 
 .micro-details {
@@ -485,7 +486,7 @@ a {
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 3px;
     color: rgb(49, 49, 49);
-    font-size: 2vw;
+    font-size: 2.3vw;
     border-radius: 5px;
     margin-bottom: 20px;
     padding: 5vw;
@@ -498,6 +499,106 @@ a {
 
 .mb2 {
     margin-bottom: 4vw;
+}
+
+#map {
+    width: 90vw;
+    height: 50vw;
+    margin-bottom: 4vw;
+    border-radius: 5px;
+}
+
+.carousel-container {
+    height: 42vw;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 2.4vw;
+    overflow: scroll;
+}
+
+.carousel-container::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel-object {
+    height: 40vw;
+    display: flex;
+    flex-direction: column;
+    margin-right: 2vw;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 3px;
+}
+
+.carousel-object-img {
+    width: 40vw;
+    height: 30vw;
+    overflow: hidden;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.opacity {
+    width: 40vw;
+    height: 30vw;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.opacity .carousel-price {
+    color: white;
+    font-size: 4vw;
+    font-weight: 600;
+    padding: .5vw;
+}
+
+.opacity .night {
+    color: white;
+    font-size: 3.35vw;
+    font-weight: 100;
+}
+
+.carousel-tag {
+    color: white;
+    font-size: 2.4vw;
+    font-weight: 600;
+    padding: .93vw 1.93vw;
+    text-transform: capitalize;
+}
+
+.carousel-object-details {
+    height: 10.8vw;
+    padding-left: 1.46vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: white;
+    justify-content: center;
+}
+
+.carousel-name {
+    font-size: 3vw;
+    font-weight: 600;
+    color: #474950;
+    margin: .24vw 0vw;
+}
+
+.carousel-location {
+    font-size: 2.2vw;
+    font-weight: 400;
+    color: #474950;
+    margin: .46vw 0vw;
 }
 
 .info-container {
@@ -565,4 +666,28 @@ hr {
 
 p {
     margin: 0;
+}
+
+.homestay {
+    background-color: orangered;
+}
+
+.hostel {
+    background-color: #03ff8b;
+}
+
+.hotel {
+    background-color: #ea0042;
+}
+
+.resort {
+    background-color: #9449ea;
+}
+
+.villa {
+    background-color: #0089ea;
+}
+
+.apartment {
+    background-color: #0089ea;
 }

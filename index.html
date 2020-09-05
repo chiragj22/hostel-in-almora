@@ -30,6 +30,10 @@
                     <div class="small-image" style="background-image: url(&quot;https://www.wanderon.in/workcations/a-hostel-in-almora/surroundings.jpg&quot;);"></div>
                     <div class="small-image" style="background-image: url(&quot;https://www.wanderon.in/workcations/a-hostel-in-almora/balcony.jpg&quot;);"></div>
                     <div class="small-image" style="background-image: url(&quot;https://www.wanderon.in/workcations/a-hostel-in-almora/deluxe-bedroom.jpg&quot;);"></div>
+                    <div class="small-image" style="background-image: url(&quot;https://www.wanderon.in/workcations/a-hostel-in-almora/balcony-view.jpg&quot;);"></div>
+                    <div class="small-image" style="background-image: url(&quot;https://www.wanderon.in/workcations/a-hostel-in-almora/surroundings.jpg&quot;);"></div>
+                    <div class="small-image" style="background-image: url(&quot;https://www.wanderon.in/workcations/a-hostel-in-almora/balcony.jpg&quot;);"></div>
+                    <div class="small-image" style="background-image: url(&quot;https://www.wanderon.in/workcations/a-hostel-in-almora/deluxe-bedroom.jpg&quot;);"></div>
                 </div>
             </div>
             <div class="inclusions-container">
@@ -356,6 +360,74 @@
                             <p>&bull; Pets are not allowed</p>
                             <p>&bull; Smoking is allowed</p>
                             <p>&bull; Alcohol Consumption is allowed within rooms</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-content">
+                    <div id="map"></div>
+                    <script>
+                        function initMap() {
+                            //approx location of hotel
+                            var hotel = {lat: 32.01, lng: 77.32};
+                            //map centered at the hotel
+                            var map = new google.maps.Map (
+                                document.getElementById('map'), {zoom: 10, center: hotel}
+                            );
+                            var image = {
+                                url: 'workcations.png'
+                            };
+                            //set marker at hotel
+                            var marker = new google.maps.Marker ({position: hotel, map: map, animation: google.maps.Animation.BOUNCE, icon: image});
+                        }
+                    </script>
+                    <script defer 
+                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfnvALIeGPnjIGRMtTvyDfVabX0AVvPLY&callback=initMap">
+                    </script>
+                </div>
+                <div class="section-content">                  
+                    <h2 class="heading">Similar Properties</h2>
+                    <div class="carousel-container">
+                        <div class="carousel-wrapper">
+                            <div class="carousel-object">
+                                <div class="carousel-object-img" style="background-image: url(MumukshuResorts-Property2.jpg);">
+                                    <div class="opacity">
+                                        <span class="carousel-tag resort">Resort</span>
+                                        <span class="carousel-price">1200<span class="night">/night</span></span>
+                                    </div>
+                                </div>
+                                <div class="carousel-object-details">
+                                    <span class="carousel-name">Resort In Pauri</span>
+                                    <span class="carousel-location">Pauri Garhwal, Uttarkahand</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-wrapper">
+                            <div class="carousel-object">
+                                <div class="carousel-object-img" style="background-image: url(HotelSkyDiver-Property7.jpg);">
+                                    <div class="opacity">
+                                        <span class="carousel-tag hotel">Hotel</span>
+                                        <span class="carousel-price">1200<span class="night">/night</span></span>
+                                    </div>
+                                </div>
+                                <div class="carousel-object-details">
+                                    <span class="carousel-name">Hotel in Bir</span>
+                                    <span class="carousel-location">Bir, Himachal Pradesh</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-wrapper">
+                            <div class="carousel-object">
+                                <div class="carousel-object-img" style="background-image: url(AHouseInTheHills-Property13.jpg);">
+                                    <div class="opacity">
+                                        <span class="carousel-tag villa">Villa</span>
+                                        <span class="carousel-price">1700<span class="night">/night</span></span>
+                                    </div>
+                                </div>
+                                <div class="carousel-object-details">
+                                    <span class="carousel-name">Villa In Mussoorie</span>
+                                    <span class="carousel-location">Mussoorie, Uttarkahand</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
